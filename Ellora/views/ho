@@ -1,0 +1,13 @@
+<%- include('partials/head') %>
+
+<%- include('partials/navbar') %>
+
+<section class="section is-large">
+  <h1 class="title">You've Reached Us! </h1>
+  <h2 class="subtitle">
+		This is the <strong>Home Section</strong>. We're Currently Closed for the public.
+  </h2>
+  <h3 class='subtitle is-6'> <strong>Opening Pretty soon!</strong> </h3>
+</section>
+
+<%- include('partials/foot') %>

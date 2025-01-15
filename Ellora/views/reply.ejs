@@ -1,0 +1,84 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+
+<div class='section'>
+		<div class="card">
+
+		<% try{ if(image) { %>
+		  <div class="card-image">
+			<figure class="image is-4by1">
+			  <img
+				src="<%= image %>"
+				alt="Placeholder image"
+			  />
+			</figure>
+		  </div>
+		  <% }}catch(e){} %>
+
+		  <div class="card-content">
+			<div class="content">
+				<p class='title'> <%= title %> </p>
+						<p class='subtitle mt-1'><%= username %>  </p>
+				<p class='title is-3 mt-6'><%= desc %><p>
+			</div>
+		  </div>
+		</div>
+</div>
+<div class='section' id='chatarea'>
+		<div class='box'>
+						<div class='columns is-multiline'> 
+						<% try{ %>
+						<% for(let reply of replies){ %>
+
+								<% if(reply.username === username){ %>
+								<div class='column is-full'>
+										<article class="message is-primary is-medium">
+										  <div class="message-header">
+											<p><strong><%= reply.date.join(" ") %></strong></p>
+											<p><strong><%= reply.username %></strong></p>
+											<p><strong><%= reply.time.join(" ") %></strong></p>
+										  </div>
+										  <div class="message-body has-text-right">
+												<strong><%= reply.reply %></strong>
+										  </div>
+										</article>
+								  </div>
+						<% } else{ %>
+								<div class='column is-full'>
+										<article class="message is-info is-medium">
+										  <div class="message-header">
+
+											<p><strong><%= reply.date.join(" ") %></strong></p>
+											<p><strong><%= reply.username %></strong></p>
+											<p><strong><%= reply.time.join(" ") %></strong></p>
+										  </div>
+										  <div class="message-body">
+												<strong><%= reply.reply %></strong>
+										  </div>
+										</article>
+								 </div>
+						 <% }}} catch(e){%>
+						 <section class='section'>
+								 <p class='subtitle'><strong><br><br>nothing yet . . .<strong></p>
+						 </section>
+						 <%} %>
+						 </div>
+		</div>
+</div>
+<form method='post' action='/posts/<%= id %>/reply'>
+<div class='section box' id='chatbox'>
+		<div class="control">
+		  <textarea
+			class="textarea is-focused is-medium is-info"
+			placeholder="Tell me something?"
+			id="chatbox-textarea"
+			rows=1
+			cols=140
+			name='reply'
+		  ></textarea>
+		</div>		
+		<button class='button is-medium mt-4 is-primary is-dark' id='chatbox-button'>Send</button>
+</div>
+</form>
+
+<%- include('partials/foot') %>
