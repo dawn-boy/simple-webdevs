@@ -1,9 +1,10 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-mongoose.connect('mongod://localhost:27017/ellora')
+mongoose.connect('mongodb://localhost:27017/ellora')
 		.then(() => {
-				console.log('Connection success');
+				console.log("Done.");
 		})
 		.catch((err) => {
-				console.log('Failed');
+				console.log(err);
 		})
+
