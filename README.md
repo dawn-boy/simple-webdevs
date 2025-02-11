@@ -70,15 +70,15 @@ Ellora
 │   │   │   *.js
 |
 └───views/                  # .ejs files
-│    │   edit.ejs
-│    │   home.ejs
-│    │   index.ejs
-│    │   post.ejs
-│    │   reply.ejs
-│    │   show.ejs
+│    │   home.ejs               # home page     (root route)
+│    │   index.ejs              # feed page     (index route)
+│    │   post.ejs               # create page   (create route)
+│    │   edit.ejs               # edit page     (update route)
+│    │   show.ejs               # post page     (show route)
+│    │   reply.ejs              # reply page    (reply route)
 │    │
 │    └───partials/          # recurring ejs codes are referenced from here
-│    │   │   foot.ejs
-│    │   │   head.ejs
-│    │   │   navbar.ejs
+│    │   │   head.ejs           # linking css files
+│    │   │   navbar.ejs         # Ellora head tab
+│    │   │   foot.ejs           # footer tabs
 ```
