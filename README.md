@@ -10,13 +10,19 @@ Ellora is a Node.js based blog application that let's people log their day-to-da
 
 ## Goals
 - Short-term
-    - Login/Signup functionalities
-    - support for media in posts
-    - host em
+    - Login/Signup functionalities.
+    - Modify replies.
+    - Edited tags for edited contents. (special tags for admin edits)
+    - Invitations.
+    - Real-time updates for the reply count tag.
+    - Media support in posts.
+    - Hosting the site.
 
 - Long-term
-    - UI overhaul
-    - Mobile app
+    - UI overhaul.
+    - Mobile app.
+    - AI integration.
+    - SOmething a lot cooler..
 
 ## Looks
 ### HomePage
