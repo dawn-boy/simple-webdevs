@@ -35,7 +35,7 @@ Ellora is a Node.js based blog application that let's people log their day-to-da
 ![4](https://github.com/user-attachments/assets/dba27703-0db0-43ce-858c-6964730b12aa)
 ### Modify a post
 ![5](https://github.com/user-attachments/assets/c66a42a5-6577-4daa-928f-2e33b0fb071f)    
-### Editing a post
+### Edit a post
 ![6](https://github.com/user-attachments/assets/0c302317-bcc7-451e-ba9f-bf96372abb25)
 
 ## Installation
