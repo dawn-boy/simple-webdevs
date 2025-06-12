@@ -1,6 +1,6 @@
 # Simple Calender app
 A React-based calender app made to keep track of days from the current date. Users can adjust the step size and count size to jump between days.
-Clicking on the Tab would switch the application to show a simple to-do list of things to do. Main focus on this play project was to make a good functional website that has good UI.
+Clicking on the Tab would switch the application to show a simple list of things to do. The Main focus on this play project was to make a good functional website that has a good UI.
 
 ## Screeenshots
 
