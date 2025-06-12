@@ -30,7 +30,7 @@
 git clone https://github.com/dawn-boy/travelo.git
 cd travelo/
 npm install
-npm start dev
+npm start
 ```
 ## The Bright Future of Travelo?
 - User accounts and cloud sync
