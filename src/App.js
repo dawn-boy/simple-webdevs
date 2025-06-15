@@ -221,7 +221,7 @@ const MovieTile = ({ data }) => {
           />
           <p className="movie-title">{data.Title}</p>
           <div className="movie-details">
-              <p>{data.Year.split('–')}</p>
+              <p>{data.Year}</p>
               <p>{data.Type}</p>
           </div>
       </div>

@@ -1,14 +1,8 @@
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+body{
     background: radial-gradient(
-    ellipse at center,
-    #10002b 50%,
-    #04000e
+            ellipse at center,
+            #10002b 50%,
+            #04000e
     );
     transition: transform 0.1s ease, opacity 0.5s ease;
 }
@@ -254,5 +248,106 @@ body::before {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: gradientMove 2s linear infinite;
+}
+@media (max-width: 450px){
+    .desc-title{
+        text-align: center;
+        margin-top: 5vw;
+        font-size: 30vw;
+    }
+    .loading, .no-movies, .search-info, .end-reached, .no-results {
+        font-size: 6vw;
+    }
+    .movie-grid{
+        gap: 0;
+    }
+    .movie-tile{
+        margin: 1vw;
+        width: 192px;
+        height: auto;
+    }
+    #movie-poster{
+        object-fit: cover;
+        width: 192px;
+        height: 300px;
+    }
+    .movie-title{
+        font-size: 1.3rem;
+    }
+    .movie-details p{
+        font-size: 1rem;
+    }
+
+    .logo{
+        font: bolder 3vw "Cinzel Decorative";
+    }
+    .the{
+        font: normal 4vw "Cinzel Decorative";
+    }
+    .big-letter-col{
+        font: normal 12vw "Cinzel Decorative";
+    }
+}
+@media (max-width: 1200px){
+    .menu{
+        display: none;
+    }
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .user-auth{
+    padding-right: 2rem;
+    }
+    .description{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .desc-title{
+        text-align: center;
+        margin-top: 5vw;
+    }
+    .desc-paragraph{
+        text-align: center;
+        padding: 8vw 9vw 5vw 9vw;
+        margin-bottom: 7vw;
+    }
+    .search-form input{
+       padding: 5vw;
+        margin: 7vw;
+    }
+    .loading, .no-movies, .search-info, .end-reached, .no-results {
+        margin: 35vw 8vw 35vw 8vw;
+    }
+    .movie-grid{
+        gap: 0;
+    }
+    .movie-tile{
+        margin: 1vw;
+        width: 192px;
+        height: auto;
+    }
+    #movie-poster{
+        object-fit: cover;
+        width: 192px;
+        height: 300px;
+    }
+    .movie-title{
+        font-size: 1.3rem;
+    }
+    .movie-details p{
+        font-size: 1rem;
+    }
+
+    .logo{
+        font: bolder 3vw "Cinzel Decorative";
+    }
+    .the{
+        font: normal 4vw "Cinzel Decorative";
+    }
+    .big-letter-col{
+        font: normal 12vw "Cinzel Decorative";
+    }
 }
