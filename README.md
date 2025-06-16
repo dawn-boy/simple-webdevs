@@ -4,7 +4,7 @@ The Colosseum is a Movie App that is powered by OMDB API. It's part of my learni
 I've always wanted to create a movie app and this is an early attempt at that wish. So, More to Come!
 
 ## What it does?
-A Simple and humble app that uses that searches for movies by the title that you give. It provides you with
+A Simple and humble app that searches for movies by the title that you've given. It provides you with
   - A list of movies under that title
   - with Release date and Media type
 
