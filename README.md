@@ -9,7 +9,7 @@ A Simple and humble app that searches for movies by the title that you've given.
   - with Release date and Media type
 
 ## The Future
-Right now, It's not much. The App is minimal but it helped me solidify the basics of React. As I said, this is just an early attempt of something better in the future, with more features and a batter UI!
+Right now, It's not much. The App is minimal but it helped me solidify the basics of React. As I said, this is just an early attempt of something better in the future, with more features and a better UI!
 
 ## Improvements
 This I'd like to do better 
