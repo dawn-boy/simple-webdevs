@@ -1,0 +1,353 @@
+body{
+    background: radial-gradient(
+            ellipse at center,
+            #10002b 50%,
+            #04000e
+    );
+    transition: transform 0.1s ease, opacity 0.5s ease;
+}
+.nav-bar{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo{
+    font: bolder 2rem "Cinzel Decorative";
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    margin-left: 2rem;
+    color: #c77dff;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+.logo .big-letter-col{
+    transition: transform 0.4s ease;
+}
+.logo:hover{
+    transform: scale(1.04);
+}
+.the{
+    font: normal 2rem "Cinzel Decorative";
+}
+.big-letter-col{
+    font: normal 5rem "Cinzel Decorative";
+}
+.logo:hover .big-letter-col{
+    transform: scale(1.3);
+}
+.small-letters-col{
+    position: relative;
+    right: 1.85rem;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 5rem;
+    color: #c77dff;
+    font-weight: bolder;
+    transition: color 0.3s ease;
+}
+.menu:hover{
+    color: #9d4edd;
+}
+.menu li{
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.menu li:hover{
+    transform: scale(1.1);
+    color: #e0aaff;
+}
+.user-auth{
+    color: #c77dff;
+    display: flex;
+    gap: 0.4rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.user-auth:hover{
+    color: #9d4edd;
+    transform: scale(1.1);
+}
+.login-btn, .register-btn{
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.login-btn:hover, .register-btn:hover{
+    transform: scale(1.1);
+    color: #e0aaff;
+
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.desc-title{
+    font: bold 10rem "Bebas Neue", sans-serif;
+    color: #e0aaff;
+    letter-spacing: 0.1rem;
+    margin: 7rem 0 0 0;
+}
+.desc-paragraph{
+    font: bold 1rem "Roboto", sans-serif;
+    color: #bbd0ff;
+    letter-spacing: 0.1rem;
+    margin: 0 0 10rem 0;
+}
+.search-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.search-form input{
+    background-color: #3c096c;
+    padding: 2rem;
+    width: 30rem;
+    border-radius: 20rem;
+    font: bolder 1rem 'Inter';
+    border: 1px solid #240046;
+    transition: border 1s ease-in-out;
+    color: #c77dff;
+}
+.search-form input::placeholder{
+    color: #c77dff;
+}
+.search-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.search-form button{
+    background-color: transparent;
+    border: none;
+}
+.search-icon{
+    width: 2rem;
+    height: 2rem;
+}
+.search-form input:focus{
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.movie-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 1.3rem;
+    margin-bottom: 2rem;
+}
+.movie-tile{
+    display: flex;
+    flex-direction: column;
+    background-color: #240046;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0.1px solid #240046;
+    width: 20rem;
+    height: clamp(auto 40px auto);
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+.movie-tile:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    background-color: #3c096c;
+    border: 0.1px solid #7b2cbf;
+}
+.movie-details{
+    display: flex;
+    justify-content: space-between;
+}
+.movie-title{
+    margin: 14px 0 0 0;
+    font: bolder 2rem "Oswald";
+    color: #e0aaff;
+}
+.movie-details p {
+    margin: 12px 0 0 0;
+    font: normal 1rem "Oswald";
+    color: #c77dff;
+}
+.movie-img{
+    border-radius: 1rem;
+    height: 30rem;
+    object-fit: cover;
+}
+.loading, .no-movies, .search-info, .end-reached, .no-results {
+    font: bold 3rem "Bebas Neue", sans-serif;
+    color: #e0aaff;
+    letter-spacing: 0.2rem;
+    margin: 15rem 0 15rem 0;
+    text-align: center;
+}
+.search-info-term{
+    font-size: 5rem;
+    color: #9d4edd;
+}
+.violet{
+    color: #c77dff;
+}
+.scroll-up{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.scroll-up-btn{
+    position: fixed;
+    bottom: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #7b2cbf;
+    margin: 0 3rem 1rem 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #c77dff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+.scroll-up-btn:hover{
+    background-color: #c77dff;
+    color: #7b2cbf;
+    transform: scale(1.1);
+}
+.scroll-up-btn:active{
+    background-color: #EEEEEE;
+    color: #c77dff;
+}
+.gradient-text {
+    background: linear-gradient(
+            270deg,
+            #240046,
+            #3c096c,
+            #5a189a,
+            #7b2cbf,
+            #9d4edd,
+            #c77dff,
+            #e0aaff,
+            #c77dff,
+            #9d4edd,
+            #7b2cbf,
+            #5a189a,
+            #3c096c,
+            #240046,
+            #10002b
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@media (max-width: 450px){
+    .desc-title{
+        text-align: center;
+        margin-top: 5vw;
+        font-size: 30vw;
+    }
+    .loading, .no-movies, .search-info, .end-reached, .no-results {
+        font-size: 6vw;
+    }
+    .movie-grid{
+        gap: 0;
+    }
+    .movie-tile{
+        margin: 1vw;
+        width: 192px;
+        height: auto;
+    }
+    #movie-poster{
+        object-fit: cover;
+        width: 192px;
+        height: 300px;
+    }
+    .movie-title{
+        font-size: 1.3rem;
+    }
+    .movie-details p{
+        font-size: 1rem;
+    }
+
+    .logo{
+        font: bolder 3vw "Cinzel Decorative";
+    }
+    .the{
+        font: normal 4vw "Cinzel Decorative";
+    }
+    .big-letter-col{
+        font: normal 12vw "Cinzel Decorative";
+    }
+}
+@media (max-width: 1200px){
+    .menu{
+        display: none;
+    }
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .user-auth{
+    padding-right: 2rem;
+    }
+    .description{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .desc-title{
+        text-align: center;
+        margin-top: 5vw;
+    }
+    .desc-paragraph{
+        text-align: center;
+        padding: 8vw 9vw 5vw 9vw;
+        margin-bottom: 7vw;
+    }
+    .search-form input{
+       padding: 5vw;
+        margin: 7vw;
+    }
+    .loading, .no-movies, .search-info, .end-reached, .no-results {
+        margin: 35vw 8vw 35vw 8vw;
+    }
+    .movie-grid{
+        gap: 0;
+    }
+    .movie-tile{
+        margin: 1vw;
+        width: 192px;
+        height: auto;
+    }
+    #movie-poster{
+        object-fit: cover;
+        width: 192px;
+        height: 300px;
+    }
+    .movie-title{
+        font-size: 1.3rem;
+    }
+    .movie-details p{
+        font-size: 1rem;
+    }
+
+    .logo{
+        font: bolder 3vw "Cinzel Decorative";
+    }
+    .the{
+        font: normal 4vw "Cinzel Decorative";
+    }
+    .big-letter-col{
+        font: normal 12vw "Cinzel Decorative";
+    }
+}
