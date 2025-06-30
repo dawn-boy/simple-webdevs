@@ -56,7 +56,7 @@ A helpful travel checklist app built in React. Add, remove, and check off items 
 
 ---
 
-## 🧩 How to Run Locally
+## How to Run Locally
 
 Clone the repo and navigate into the folder of the project you want to try out.  
 Each project includes setup instructions in its own `README.md`.
