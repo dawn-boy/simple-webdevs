@@ -1,5 +1,5 @@
 # Travelo - A Travelling Companion Web App
-![3](https://github.com/user-attachments/assets/607aa270-0e2e-45c7-b966-5b53c094ec3f)
+![image](https://github.com/user-attachments/assets/6a952d13-8585-4914-a01f-1ef970519d20)
 
 ![Travelo](https://github.com/user-attachments/assets/ede100aa-d0e8-4244-b884-a6a7d8047bae)
 
