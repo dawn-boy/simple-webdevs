@@ -1,7 +1,7 @@
 # Ellora
 
 ## Overview  
-![2](https://github.com/user-attachments/assets/7012a265-a4f3-4504-908a-0baac2ce9dad)
+![image](https://github.com/user-attachments/assets/466e7b8b-c121-4320-a45d-2b2b32244982)
 
 **Ellora** is a Node.js based blog application that let's people log their day-to-day activities.  
 This project is still undergoing development and we're in the alpha stage now.  
