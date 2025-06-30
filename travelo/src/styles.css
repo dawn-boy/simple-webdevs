@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    background-color: #f4f1de;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    text-align: center;
+    font: 10rem "FantasqueSansM Nerd Font";
+    font-weight: bold;
+    padding: 4rem;
+    margin: 0;
+    background-color: #f4f1de;
+    color: #e07a5f;
+}
+.add-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3d405b;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+    font-family: "FantasqueSansM Nerd Font";
+}
+.title{
+    font-size: 2rem;
+    color: #f4f1de;
+} .form{
+    display: flex;
+    gap: 1rem;
+}
+.form select {
+    font: 2rem "FantasqueSansM Nerd Font";
+    border: none;
+    background-color: #f4f1de;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    color: #3d405b;
+    font-weight: bold;
+}
+.form input {
+    font: 2rem "FantasqueSansM Nerd Font";
+    border: none;
+    background-color: #f4f1de;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+.form button {
+    font: 2rem "FantasqueSansM Nerd Font";
+    border: none;
+    background-color: #e07a5f;
+    border-radius: 1rem;
+    color: #f4f1de;
+    padding: 1rem 4rem;
+    font-weight: bold;
+}
+.form button:hover{
+    background-color: #ae2012;
+}
+.form button:active{
+    color: #9b2226;
+    background-color: #f4f1de;
+}
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    flex-wrap: wrap;
+    background-color: #81b29a;
+    border: 1rem solid #f4f1de;
+    border-radius: 2rem;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    align-items: center;
+}
+.item-txt{
+    font: 3rem "FantasqueSansM Nerd Font";
+    color: #f4f1de;
+}
+.item-ct{
+    font-size: 8rem;
+    font-weight: bold;
+    color: #3d405b;
+}
+.packed{
+    text-decoration: line-through;
+    color: #9b2226;
+}
+.item-btns{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+.item-btns button{
+    font: 2rem "FantasqueSansM Nerd Font";
+    border: none;
+    background-color: #52856c;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    flex-grow: 1;
+    color: #182820;
+    font-weight: bold;
+}
+.item-btns button:hover{
+    background-color: #3d405b;
+    color: #f4f1de;
+}
+.item-btns button:active{
+    background-color: #9b2226;
+    color: #f4f1de;
+}
+.stats{
+    text-align: center;
+    background-color: #f4f1de;
+    padding: 4rem;
+    font: 3rem "FantasqueSansM Nerd Font";
+    font-weight: bold;
+}
+.stats-ct{
+    font-size: 5rem;
+}
+.stats-ct-red{
+    color: #ae2012;
+}
+.stats-ct-green{
+    color: #416b56;
+}
+.poor-txt{
+    font: 2rem "FantasqueSansM Nerd Font";
+    padding: 10rem 2rem;
+    text-align: center;
+}
