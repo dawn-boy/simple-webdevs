@@ -1,10 +1,10 @@
-# The Colosseum - A Movie app
-
+# The Colosseum 
+![screencapture-localhost-3000-2025-06-30-09_37_02](https://github.com/user-attachments/assets/4d1d1863-f598-4db8-aefc-cef51f0b9fc2)
 The Colosseum is a Movie App that is powered by OMDB API. It's part of my learning journey of React and also
 I've always wanted to create a movie app and this is an early attempt at that wish. So, More to Come!
-
 ## What it does?
 A Simple and humble app that searches for movies by the title that you've given. It provides you with
+
   - A list of movies under that title
   - with Release date and Media type
 
@@ -22,7 +22,7 @@ This I'd like to do better
 
 1. Clone The-Colosseum
 ```sh
-git clone https://github.com/your-username/the-colosseum.git
+git clone https://github.com/your-username/simple-webdevs.git
 cd the-colosseum
 ```
 2. Install Dependencies
@@ -31,7 +31,7 @@ npm install
 ```
 3. Run it
 ```sh
-npm start
+npm run start
 ```
 
 Thanks for checking it out!
