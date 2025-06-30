@@ -1,0 +1,148 @@
+body{
+    background-color: #003049;
+}
+.steps-tracker{
+    background-color: #669bbc;
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+.numbers{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.number{
+    background-color: #003049;
+    padding: 0.8rem 1.4rem;
+    border-radius: 2rem;
+    color: #fdf0d5;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.active{
+    background-color: #fdf0d5;
+    color: #003049;
+}
+.message{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Fantasque Sans Mono";
+    padding: 4rem;
+    font-weight: bold;
+    color: #003049;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.action-btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 3rem;
+    font: 1rem helvetica;
+    background-color: #003049;
+    color: #fdf0d5;
+    font-weight: bold;
+}
+.action-btn:hover{
+    background-color: #bde0fe;
+    color: #003049;
+    padding: 1rem;
+}
+.action-btn:active{
+    background-color: #fdf0d5;
+    color: #003049;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.switch-btn{
+    padding: 1.5rem 20rem;
+    border: none;
+    border-radius: 1rem;
+    margin: 2rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #bde0fe;
+}
+.switch-btn:hover{
+    background-color: darkred;
+    color: #fdf0d5;
+}
+.switch-btn:active{
+    color: darkred;
+    background-color: #fdf0d5;
+}
+.close-btn{
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+    font-size: 5rem;
+    color: #bde0fe;
+}
+.close-btn:hover{
+    color: darkred;
+}
+.close-btn:active{
+    color: red;
+}
+.change-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.change-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 5rem;
+    font-weight: bolder;
+    color: #bde0fe;
+    padding: 2rem;
+}
+.change-btn:hover{
+    color: darkred;
+}
+.change-btn:active{
+    color: red;
+}
+.change-txt{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003049;
+}
+.change-txt-main{
+    font-size: 5rem;
+    font-weight: bold;
+    color: midnightblue;
+    margin-left: 0.4rem;
+}
+.change-txt-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.change-btns-container{
+    display: flex;
+    justify-content: space-around;
+}
+.date-message{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Fantasque Sans Mono";
+    padding: 4rem;
+    font-weight: bold;
+    color: #003049;
+}
+.date-txt{
+    color: darkred;
+    font-size: 9rem;
+    margin-top: 5rem;
+}
