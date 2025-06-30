@@ -62,9 +62,12 @@ body{
 .header{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
 }
 .switch-btn{
-    padding: 1.5rem 20rem;
+    padding: 1em 20em;
     border: none;
     border-radius: 1rem;
     margin: 2rem;
@@ -106,6 +109,7 @@ body{
     font-weight: bolder;
     color: #bde0fe;
     padding: 2rem;
+    font-size: 2em;
 }
 .change-btn:hover{
     color: darkred;
@@ -132,10 +136,11 @@ body{
 .change-btns-container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .date-message{
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 3.5em;
     font-family: "Fantasque Sans Mono";
     padding: 4rem;
     font-weight: bold;
@@ -143,6 +148,25 @@ body{
 }
 .date-txt{
     color: darkred;
-    font-size: 9rem;
-    margin-top: 5rem;
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+
+@media (max-width: 600px){
+    .header{
+        justify-content: start;
+    }
+    .switch-btn{
+        padding: 1em 5em;
+
+    }
+    .date-message{
+        font-size: 2em;
+        margin-top: 0.1em;
+        padding-top: 0.9em;
+    }
+    .date-txt{
+        font-size: 2em;
+        margin-top: 0.4em;
+    }
 }
