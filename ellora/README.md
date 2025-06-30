@@ -6,7 +6,7 @@
 **Ellora** is a Node.js based blog application that let's people log their day-to-day activities.  
 This project is still undergoing development and we're in the alpha stage now.  
 
-We're Live now: [Ellora](https://ellora-k4md.onrender.com/)
+Alpha build's Live now: [Ellora](https://ellora-k4md.onrender.com/)
 
 ---
 
