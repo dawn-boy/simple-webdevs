@@ -2,7 +2,10 @@
 <%- include('partials/navbar') %>
 
 <form method='post' action='/posts/<%= data.id %>?_method=PATCH' class='section is-large'>
-		
+
+		<div class='field'>
+			<input type='text' id='username' name='username' class='input is-large' required placeholder="Something new.." disabled>
+		</div>
 		<div class='field'>
 				<label for='user' class='title'> Title </label>
 		</div>

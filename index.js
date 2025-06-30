@@ -3,6 +3,9 @@ const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const path = require('path');
+const rateLimit = require('express-rate-limit');
+const sanitize = require('sanitize-html')
+require('dotenv').config();
 
 //configuring express
 const app = express();
@@ -11,9 +14,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
+app.use(rateLimit({
+	windowMs: 1 * 60 * 1000,
+	max: 30
+}))
+
 
 //configuring mongoose
-mongoose.connect('mongodb://localhost:27017/ellora')
+mongoose.connect(process.env.MONGO_URL)
 const postSchema = mongoose.Schema({
 		username: String,
 		title: String,
@@ -52,11 +60,15 @@ app.get( '/create', ( req,res ) => {
 		res.render('post');
 })
 app.post( '/posts', ( req,res ) => {
-		const { title, desc } = req.body;
+		let { username, title, desc } = req.body;
 		const [ time, date ] = moment();
 
+		username = sanitizer(username);
+		title = sanitizer(title);
+		desc = sanitizer(desc);
+
 		const post = new Post( {
-				username: 'user',
+				username: username,
 				title: title,
 				desc: desc,
 				time: time,
@@ -65,8 +77,7 @@ app.post( '/posts', ( req,res ) => {
 				replies: []
 		});
 
-		res.redirect( '/posts' );
-		post.save()
+		post.save().then(() => res.redirect( '/posts' ));
 })
 
 // Show route
@@ -117,10 +128,11 @@ app.get( '/posts/:id/reply',( req,res ) => {
 })
 app.post( '/posts/:id/reply',( req,res ) => {
 		const { id } = req.params;
-		const { userReply } = req.body;
+		let { userReply } = req.body;
+		userReply = sanitizer(userReply);
 		const [ time,date ] = moment();
 		const reply = { 
-				username: "testUser",
+				username: "Anon",
 				reply: userReply,
 				time: time,
 				date: date
@@ -130,8 +142,7 @@ app.post( '/posts/:id/reply',( req,res ) => {
 		.then( data => {
 				data.replies.unshift( reply );
 				data.replyCount++;
-				res.redirect( `/posts/${id}/reply` );
-				data.save()
+				data.save().then(() => res.redirect( `/posts/${id}/reply` ));
 		})
 })
 
@@ -147,4 +158,10 @@ function moment(){
 		time = d.toLocaleTimeString().split(" ");
 		date = [date.split(' ').slice(1,-1).join(" "),date.split(' ').slice(-1).join(" ")];
 		return [time, date];
+}
+function sanitizer(value){
+	return sanitize(value, {
+		allowedTags: ['b', 'i', 'em', 'strong', 'a', 'ul', 'ol', 'li', 'p', 'br'],
+		allowedAttributes: {},
+	})
 }
