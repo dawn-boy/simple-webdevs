@@ -8,7 +8,7 @@ body{
 }
 .logo{
     text-align: center;
-    font: 10rem "FantasqueSansM Nerd Font";
+    font: 9em "FantasqueSansM Nerd Font";
     font-weight: bold;
     padding: 4rem;
     margin: 0;
@@ -27,7 +27,8 @@ body{
 .title{
     font-size: 2rem;
     color: #f4f1de;
-} .form{
+}
+.form{
     display: flex;
     gap: 1rem;
 }
@@ -81,8 +82,10 @@ body{
     align-items: center;
 }
 .item-txt{
-    font: 3rem "FantasqueSansM Nerd Font";
+    font: 3em "FantasqueSansM Nerd Font";
     color: #f4f1de;
+    text-align: center;
+    padding-bottom: 0.5em;
 }
 .item-ct{
     font-size: 8rem;
@@ -121,7 +124,7 @@ body{
     text-align: center;
     background-color: #f4f1de;
     padding: 4rem;
-    font: 3rem "FantasqueSansM Nerd Font";
+    font: 2em "FantasqueSansM Nerd Font";
     font-weight: bold;
 }
 .stats-ct{
@@ -137,4 +140,46 @@ body{
     font: 2rem "FantasqueSansM Nerd Font";
     padding: 10rem 2rem;
     text-align: center;
+}
+
+@media (max-width: 600px){
+    .logo{
+        font-size: 6em;
+    }
+    .title{
+        font-size: 1.2em;
+    }
+    .form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 3em 3em 0 3em;
+    }
+    .form select{
+        font-size: 1.4em;
+        order: 1;
+        width: 6em;
+    }
+    .form input{
+        height: 2em;
+    }
+    .form button{
+        order: 1;
+        width: 9.2em;
+    }
+    .item{
+        padding: 0.5em;
+    }
+    .item-txt{
+        font-size: 2em;
+        padding-top: 1em;
+    }
+    .item-ct{
+        font-size: 2em;
+    }
+    .item-btns button{
+        font-size: 1em;
+    }
+    stats{
+        font-size: 0;
+    }
 }
