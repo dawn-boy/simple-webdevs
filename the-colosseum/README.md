@@ -2,6 +2,9 @@
 ![screencapture-localhost-3000-2025-06-30-09_37_02](https://github.com/user-attachments/assets/4d1d1863-f598-4db8-aefc-cef51f0b9fc2)
 The Colosseum is a Movie App that is powered by OMDB API. It's part of my learning journey of React and also
 I've always wanted to create a movie app and this is an early attempt at that wish. So, More to Come!
+
+It's Live: [The Colosseum](https://the-colosseum.vercel.app/)
+
 ## What it does?
 A Simple and humble app that searches for movies by the title that you've given. It provides you with
 
