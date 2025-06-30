@@ -6,6 +6,8 @@ const path = require('path');
 const rateLimit = require('express-rate-limit');
 const sanitize = require('sanitize-html')
 require('dotenv').config();
+const { v4: uuid } = require('uuid');
+const session = require('express-session');
 
 //configuring express
 const app = express();
@@ -18,7 +20,11 @@ app.use(rateLimit({
 	windowMs: 1 * 60 * 1000,
 	max: 30
 }))
-
+app.use(session({
+	secret: process.env.SESSION_SECRET,
+	resave: true,
+	saveUninitialized: true
+}))
 
 //configuring mongoose
 mongoose.connect(process.env.MONGO_URL)
@@ -67,6 +73,11 @@ app.post( '/posts', ( req,res ) => {
 		title = sanitizer(title);
 		desc = sanitizer(desc);
 
+		req.session.username = username;
+		if(username === process.env.ADMIN){
+			username = "victor";
+		}
+
 		const post = new Post( {
 				username: username,
 				title: title,
@@ -112,10 +123,14 @@ app.patch( '/posts/:id',( req,res ) => {
 // Delete route
 app.delete( '/posts/:id',( req,res ) => {
 		const { id } = req.params;
-		Post.deleteOne({ _id: id })
-		.then( resp => {
-				res.redirect('/posts');
-		})
+		if(req.session.username === process.env.ADMIN){
+			Post.deleteOne({ _id: id })
+				.then( resp => {
+					res.redirect('/posts');
+				})
+		}else{
+			res.redirect('/posts');
+		}
 })
 
 // Replies functionality
@@ -131,8 +146,12 @@ app.post( '/posts/:id/reply',( req,res ) => {
 		let { userReply } = req.body;
 		userReply = sanitizer(userReply);
 		const [ time,date ] = moment();
-		const reply = { 
-				username: "Anon",
+		let username = 'Anon'
+		if(req.session.username === process.env.ADMIN){ username = 'victor' }
+		else{ username = req.session.username}
+		const reply = {
+				replyId: uuid(),
+				username: username,
 				reply: userReply,
 				time: time,
 				date: date
@@ -140,12 +159,23 @@ app.post( '/posts/:id/reply',( req,res ) => {
 
 		Post.findById(id)
 		.then( data => {
-				data.replies.unshift( reply );
+				data.replies.push( reply );
 				data.replyCount++;
 				data.save().then(() => res.redirect( `/posts/${id}/reply` ));
 		})
 })
-
+app.post( '/posts/:id/:replyId', (req,res) => {
+	const { id,replyId } = req.params;
+	if(req.session.username === process.env.ADMIN){
+		Post.updateOne({ _id: id }, { $pull: { replies: { replyId }}, $inc: { replyCount: -1 } } ).then(
+			() => {
+				res.redirect(`/posts/${id}/reply`)
+			}
+		)
+	} else{
+		res.redirect(`/posts/${id}/reply`)
+	}
+})
 //Express App listen port
 app.listen( 8000, () => {
 		console.log( "Connection Requested" );

@@ -29,35 +29,22 @@
 						<div class='columns is-multiline'> 
 						<% try{ %>
 						<% for(let reply of data.replies){ %>
-
-								<% if(reply.username === data.username){ %>
-								<div class='column is-full'>
-										<article class="message is-primary is-medium">
-										  <div class="message-header">
-											<p><strong><%= reply.date.join(" ") %></strong></p>
-											<p><strong><%= reply.username %></strong></p>
-											<p><strong><%= reply.time.join(" ") %></strong></p>
-										  </div>
-										  <div class="message-body has-text-right">
-												<strong><%= reply.reply %></strong>
-										  </div>
-										</article>
-								  </div>
-						<% } else{ %>
-								<div class='column is-full'>
-										<article class="message is-info is-medium">
-										  <div class="message-header">
-
-											<p><strong><%= reply.date.join(" ") %></strong></p>
-											<p><strong><%= reply.username %></strong></p>
-											<p><strong><%= reply.time.join(" ") %></strong></p>
-										  </div>
-										  <div class="message-body">
-												<strong><%= reply.reply %></strong>
-										  </div>
-										</article>
-								 </div>
-						 <% }}} catch(e){%>
+							<div class='column is-full'>
+									<article class="message is-primary is-medium">
+									  <div class="message-header">
+										<p><strong><%= reply.date.join(" ") %></strong></p>
+										<p><strong><%= reply.username %></strong></p>
+										<p><strong><%= reply.time.join(" ") %></strong></p>
+									  </div>
+									  <div class="message-body has-text-right reply" >
+										  <form method="post" action="/posts/<%=data._id%>/<%= reply.replyId %>">
+											  <button class="reply-close-btn" ><strong>&times;</strong></button>
+										  </form>
+										  <strong class="reply-text"><%= reply.reply %></strong>
+									  </div>
+									</article>
+							  </div>
+						 <% }} catch(e){%>
 						 <section class='section'>
 								 <p class='subtitle'><strong><br><br>nothing yet . . .<strong></p>
 						 </section>

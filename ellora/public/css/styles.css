@@ -69,4 +69,14 @@ body{
 #card-body,.box,.card-content{
 		background-color: #0f0f0f;
 }
-
+.reply{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.reply-close-btn{
+	font-size: 25px;
+}
+.reply-close-btn:hover, .reply-close-btn:active{
+	color: darkred;
+}
