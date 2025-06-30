@@ -1,5 +1,5 @@
 # The Colosseum 
-![screencapture-localhost-3000-2025-06-30-09_37_02](https://github.com/user-attachments/assets/4d1d1863-f598-4db8-aefc-cef51f0b9fc2)
+![image](https://github.com/user-attachments/assets/0b6c2870-9946-49e2-b8d6-117c58d887c7)
 The Colosseum is a Movie App that is powered by OMDB API. It's part of my learning journey of React and also
 I've always wanted to create a movie app and this is an early attempt at that wish. So, More to Come!
 
