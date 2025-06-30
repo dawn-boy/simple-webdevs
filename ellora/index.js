@@ -177,7 +177,7 @@ app.post( '/posts/:id/:replyId', (req,res) => {
 	}
 })
 //Express App listen port
-app.listen( 8000, () => {
+app.listen( process.env.PORT, () => {
 		console.log( "Connection Requested" );
 })
 
